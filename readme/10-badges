@@ -1,0 +1,8 @@
+[![build-status](https://gitlab.com/bagrounds/fun-perceptron/badges/master/build.svg)](https://gitlab.com/bagrounds/fun-perceptron/commits/master)
+[![coverage-report](https://gitlab.com/bagrounds/fun-perceptron/badges/master/coverage.svg)](https://gitlab.com/bagrounds/fun-perceptron/commits/master)
+[![license](https://img.shields.io/npm/l/fun-perceptron.svg)](https://www.npmjs.com/package/fun-perceptron)
+[![version](https://img.shields.io/npm/v/fun-perceptron.svg)](https://www.npmjs.com/package/fun-perceptron)
+[![downloads](https://img.shields.io/npm/dt/fun-perceptron.svg)](https://www.npmjs.com/package/fun-perceptron)
+[![downloads-monthly](https://img.shields.io/npm/dm/fun-perceptron.svg)](https://www.npmjs.com/package/fun-perceptron)
+[![dependencies](https://david-dm.org/bagrounds/fun-perceptron/status.svg)](https://david-dm.org/bagrounds/fun-perceptron)
+
