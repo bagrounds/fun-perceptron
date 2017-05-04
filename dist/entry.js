@@ -1,0 +1,2 @@
+funPerceptron = require('../src')
+
