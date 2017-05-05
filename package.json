@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "A functional perceptron",
   "main": "src/index.js",
+  "browser": "dist/bundle.js",
   "scripts": {
     "pretest": "npm run lint",
     "test": "tap -Rtap --coverage-report=text-summary ./test/index.js",
