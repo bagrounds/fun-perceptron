@@ -8,7 +8,7 @@
   var arrange = require('fun-arrange')
   var array = require('fun-array')
 
-  var classify = [
+  var compute = [
     [[[0, 0], [0]], 0],
     [[[0, 1], [0]], 0],
     [[[1, 0], [0]], 1],
@@ -16,12 +16,12 @@
     [[[0, 0], [1]], 0],
     [[[0, 1], [1]], 1],
     [[[1, 0], [1]], 1],
-    [[[1, 1], [1]], 1]
-  ].map(array.append('classify'))
+    [[[1, 1], [1]], 2]
+  ].map(array.append('compute'))
 
   /* exports */
   module.exports = [
-    classify
+    compute
   ].reduce(array.concat, [])
     .map(arrange({ inputs: 0, predicate: 1, contra: 2 }))
     .map(object.ap({
