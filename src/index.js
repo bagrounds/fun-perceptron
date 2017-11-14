@@ -35,7 +35,17 @@
   var guards = {
     compute: wxToNumberGuard,
     classify: wxToNumberGuard,
-    measure: wxToNumberGuard
+    measure: wxToNumberGuard,
+    update: guarded(
+      type.tuple([
+        type.num,
+        type.num,
+        vector.isVector,
+        vector.isVector,
+        predicate.or(scalar.equal(1), scalar.equal(0))
+      ]),
+      vector.isVector
+    )
   }
 
   /* exports */
