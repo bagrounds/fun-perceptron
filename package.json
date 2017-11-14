@@ -48,6 +48,7 @@
     "fun-function": "^0.7.4",
     "fun-predicate": "^0.15.3",
     "fun-scalar": "^0.3.0",
+    "fun-type": "^0.6.2",
     "fun-vector": "^0.2.0",
     "guarded": "^0.7.0"
   }

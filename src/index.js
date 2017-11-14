@@ -12,25 +12,34 @@
   var guarded = require('guarded')
   var predicate = require('fun-predicate')
   var fn = require('fun-function')
+  var object = require('fun-object')
+  var type = require('fun-type')
 
-  var isValidWeightXPair = [
-    array.all(vector.isVector),
-    predicate.type('([Number], [Number])'),
-    fn.applyFrom({
-      inputs: array.map(array.length),
-      f: fn.k(fn.compose(scalar.equal(-1), scalar.sub))
-    })
-  ].reduce(predicate.and)
+  var fst1LessThanSnd = fn.composeAll([
+    scalar.equal(-1),
+    fn.argsToArray(scalar.sub),
+    array.map(array.length)
+  ])
 
-  var wxToNumberGuard = guarded(isValidWeightXPair, predicate.type('Number'))
+  var wAndX = predicate.and(type.vectorOf(2, vector.isVector), fst1LessThanSnd)
+
+  var wxToNumberGuard = guarded(wAndX, type.num)
+
+  var api = {
+    compute: compute,
+    classify: classify,
+    measure: measure,
+    update: update
+  }
+
+  var guards = {
+    compute: wxToNumberGuard,
+    classify: wxToNumberGuard,
+    measure: wxToNumberGuard
+  }
 
   /* exports */
-  module.exports = {
-    compute: fn.curry(wxToNumberGuard(compute)),
-    classify: fn.curry(wxToNumberGuard(classify)),
-    measure: fn.curry(wxToNumberGuard(measure)),
-    update: fn.curry(update)
-  }
+  module.exports = object.map(fn.curry, object.ap(guards, api))
 
   /**
    *
