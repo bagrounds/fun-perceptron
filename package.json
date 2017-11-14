@@ -44,7 +44,7 @@
     "uglify-js": "^3.0.1"
   },
   "dependencies": {
-    "fun-array": "^0.6.0",
+    "fun-array": "^0.11.0",
     "fun-function": "^0.7.4",
     "fun-predicate": "^0.15.3",
     "fun-scalar": "^0.3.0",
